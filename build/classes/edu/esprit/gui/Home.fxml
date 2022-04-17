@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="edu.esprit.gui.HomeController">
+   <children>
+      <Label layoutX="60.0" layoutY="19.0" text="Id" />
+      <Label layoutX="41.0" layoutY="68.0" text="Designation" />
+      <Label layoutX="60.0" layoutY="111.0" text="Prix" />
+      <Label layoutX="60.0" layoutY="165.0" text="Image" />
+      <Label layoutX="60.0" layoutY="200.0" text="Quantite" />
+      <Label layoutX="35.0" layoutY="246.0" text="Cathegorie_id" />
+      <TextField fx:id="pId" layoutX="174.0" layoutY="14.0" />
+      <TextField fx:id="pDesignation" layoutX="174.0" layoutY="63.0" />
+      <TextField fx:id="pPrix" layoutX="182.0" layoutY="117.0" />
+      <TextField fx:id="pImage" layoutX="174.0" layoutY="160.0" />
+      <TextField fx:id="pQuantite" layoutX="174.0" layoutY="206.0" />
+      <TextField fx:id="pCathegorie_id" layoutX="174.0" layoutY="252.0" />
+      <Button fx:id="PAjouter" layoutX="155.0" layoutY="322.0" mnemonicParsing="false" onAction="#AjouterProduit" text="Ajouter" />
+     
+   </children>
+</AnchorPane>
