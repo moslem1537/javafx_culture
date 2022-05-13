@@ -2,7 +2,7 @@ package Interfaces;
 
 import Entities.Cart;
 import Entities.Commande;
-import Entities.Produit;
+import Entities.produit;
 import com.itextpdf.text.DocumentException;
 import javafx.collections.ObservableList;
 import javafx.scene.chart.PieChart;

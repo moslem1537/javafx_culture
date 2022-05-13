@@ -1,7 +1,7 @@
 package Services;
 
 import Entities.Panier;
-import Entities.Produit;
+import Entities.produit;
 import Interfaces.IServicePanier;
 import Utils.Connexion;
 import javafx.collections.FXCollections;

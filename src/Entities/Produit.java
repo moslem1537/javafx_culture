@@ -1,44 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Entities;
 
 /**
- * @author Mintoua
+ *
+ * @author admin
  */
-
-public class Produit {
-
-    private int id;
-    private String name;
-    private String ref;
-    private String description;
-    private float price;
-    private int quantity;
+public class produit {
+      private int id;
+    private String designation;
+    private String prix;
+    private int quantite;
     private String image;
+    private int cathegorie_id;
+    category Category;
 
-    //contructors begin
-    public Produit(){
-
-    }
-
-    public Produit(String name,String ref, String description,float price, int quantity, String image){
-        this.name = name;
-        this.ref =  ref;
-        this.description = description;
-        this.price = price;
-        this.quantity= quantity;
-        this.image = image;
-    }
-    public Produit(int id, String name,String ref, String description,float price, int quantity, String image){
+    public produit(int id, String designation, String prix, int quantite, String image, int cathegorie_id) {
         this.id = id;
-        this.name = name;
-        this.ref =  ref;
-        this.description = description;
-        this.price = price;
-        this.quantity= quantity;
+        this.designation = designation;
+        this.prix = prix;
+        this.quantite = quantite;
         this.image = image;
+        this.cathegorie_id = cathegorie_id;
+    }
 
-    } //contructors end
+    public produit(String designation, String prix, int quantite, String image, int cathegorie_id) {
+        this.designation = designation;
+        this.prix = prix;
+        this.quantite = quantite;
+        this.image = image;
+        this.cathegorie_id = cathegorie_id;
+    }
 
-    //getters and setter begin
+    
+  
     public int getId() {
         return id;
     }
@@ -47,44 +45,28 @@ public class Produit {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getDesignation() {
+        return designation;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDesignation(String designation) {
+        this.designation = designation;
     }
 
-    public String getRef() {
-        return ref;
+    public String getPrix() {
+        return prix;
     }
 
-    public void setRef(String ref) {
-        this.ref = ref;
+    public void setPrix(String prix) {
+        this.prix = prix;
     }
 
-    public String getDescription() {
-        return description;
+    public int getQuantite() {
+        return quantite;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public float getPrice() {
-        return price;
-    }
-
-    public void setPrice(float price) {
-        this.price = price;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setQuantite(int quantite) {
+        this.quantite = quantite;
     }
 
     public String getImage() {
@@ -95,22 +77,41 @@ public class Produit {
         this.image = image;
     }
 
-    @Override
-    public String toString() {
-        return "Produit{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", ref='" + ref + '\'' +
-                ", description='" + description + '\'' +
-                ", price=" + price +
-                ", quantity=" + quantity +
-                ", image='" + image + '\'' +
-                '}';
+    public int getCathegorie_id() {
+        return cathegorie_id;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        return hash;
+    public void setCathegorie_id(int cathegorie_id) {
+        this.cathegorie_id = cathegorie_id;
     }
+
+    public category getCategory() {
+        return Category;
+    }
+
+    public void setCategory(category Category) {
+        this.Category = Category;
+    }
+
+    public produit(int id,int quantite, String designation, String image,String prix, category Category) {
+        this.id = id;
+        this.quantite = quantite;
+   
+        this.designation = designation;
+         this.image = image;
+        this.prix = prix;
+       
+        this.Category = Category;
+    }
+
+    public produit() {
+    }
+    
+
+    @Override
+    public String toString() {
+        return "produit{" + "id=" + id + "\n designation=" + designation + "\n prix=" + prix + "\n quantite=" + quantite + "\n image=" + image + "\n cathegorie_id=" + cathegorie_id + '}';
+    }
+     
+
 }

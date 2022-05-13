@@ -92,13 +92,9 @@
                         <Image url="@../../../images/logo.png" />
                      </image>
                   </ImageView>
-                  <MenuButton alignment="BASELINE_LEFT" graphicTextGap="20.0" layoutX="-3.0" layoutY="219.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="188.0" style="-fx-background-color: transparent;" stylesheets="@../StylSheet/Style.css" text="Job Offers" textFill="WHITE" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="250.0">
+                  <MenuButton alignment="BASELINE_LEFT" graphicTextGap="20.0" layoutX="-3.0" layoutY="219.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="188.0" style="-fx-background-color: transparent;" stylesheets="@../StylSheet/Style.css" text="Blogs" textFill="WHITE" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="250.0">
                     <items>
-                      <MenuItem fx:id="addoffre" mnemonicParsing="false" text="Add Job Offer" />
-                      <MenuItem fx:id="deloff" mnemonicParsing="false" text="Delete Job Offer" />
-                        <MenuItem fx:id="upoff" mnemonicParsing="false" text="Update Job Offer" />
-                        <MenuItem fx:id="treatapps" mnemonicParsing="false" text="See Applications" />
-                        <MenuItem fx:id="stat" mnemonicParsing="false" text="Offer Statistiques" />
+                      <MenuItem fx:id="addoffre" mnemonicParsing="false" text="Blog" />
                     </items>
                      <graphic>
                         <ImageView fitHeight="24.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">

@@ -3,7 +3,7 @@ package Gui.Backoffice;
 import Entities.Cart;
 import Entities.Commande;
 import Entities.Product;
-import Entities.Produit;
+import Entities.produit;
 import Gui.Produit.AddProductController;
 import Services.ServiceProduit;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;

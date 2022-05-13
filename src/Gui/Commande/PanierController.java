@@ -9,7 +9,7 @@ import Entities.Commande;
 import Entities.Panier;
 //import Entitie.User.User;
 import Entities.Cart;
-import Entities.Produit;
+import Entities.produit;
 import Services.ServiceCommande;
 import Services.ServicePanier;
 import animatefx.animation.Bounce;
@@ -70,7 +70,7 @@ public class PanierController implements Initializable {
     private TableView<Cart> panierView;
     AnchorPane centerContent;
     ObservableList<Cart> panier = FXCollections.observableArrayList();
-    ObservableList<Produit> card = FXCollections.observableArrayList();
+    ObservableList<produit> card = FXCollections.observableArrayList();
     @FXML
     private Label subTotal;
 
@@ -107,16 +107,6 @@ public class PanierController implements Initializable {
                 throwables.printStackTrace();
             }
         }
-    }
-    public void myFunction(Produit prodc){/*
-        image.setCellValueFactory(new PropertyValueFactory<>("Image"));
-        nom.setCellValueFactory(new PropertyValueFactory<>("Nom"));
-        prix.setCellValueFactory(new PropertyValueFactory<>("Prix"));
-        quantite.setCellValueFactory(new PropertyValueFactory<>("Quantite"));
-        remove.setCellValueFactory(new PropertyValueFactory<>("Remove"));
-        card.add(prodc);
-        panierView.setItems(card);
-*/
     }
 
     //public void redirection(AnchorPane c, ObservableList<Cart> pa, User u)

@@ -1,7 +1,6 @@
 package Gui.Commande;
 
 import Entities.Commande;
-import Entities.Offre_Emploi;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;

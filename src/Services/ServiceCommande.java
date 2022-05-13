@@ -191,7 +191,7 @@ public class ServiceCommande implements IServiceCommande {
                 list.add(data);
             }
         } catch (SQLException e) {
-            Logger.getLogger(Offre_Emploi_Service.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+            Logger.getLogger(ServiceCommande.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }
         return list;
     }

@@ -1,7 +1,7 @@
 package Utils;
 
 
-import Entities.Produit;
+import Entities.produit;
 import com.itextpdf.text.BadElementException;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
@@ -16,7 +16,8 @@ import java.sql.SQLException;
 
 public class pdf {
       
-        //webcam.main(args);  
+        //webcam.main(args);
+    /*
     public void GeneratePdf(String filename,Produit v,int qnt) throws FileNotFoundException, DocumentException, BadElementException, IOException, InterruptedException, SQLException
     {
         Document document=new  Document();
@@ -32,5 +33,7 @@ public class pdf {
         document.close();
         //Process pro=Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler "+filename+".pdf");
     }
+    */
+
 }
 

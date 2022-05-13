@@ -1,14 +1,12 @@
 package Gui.Backoffice;
 
 import Entities.Commande;
-import Entities.Offre_Emploi;
 import Entities.Product;
-import Entities.Produit;
+import Entities.produit;
 import Gui.Acceuil.FXloader;
 import Gui.Commande.ListCellCommande;
-import Gui.OffreEmploi.OffreCell;
+import Gui.HomePage;
 import Gui.Produit.AddProductController;
-import Services.Offre_Emploi_Service;
 import Services.ServiceCommande;
 import Services.ServiceProduit;
 import animatefx.animation.FadeInDown;
@@ -138,10 +136,10 @@ public class BackofficeController implements Initializable {
     private ListView<Product> productGrid;
 
     private List<Product> productsList;
-    ObservableList<Produit> dataList;
+    ObservableList<produit> dataList;
 
 
-    Produit productTab = null;
+    produit productTab = null;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -162,11 +160,19 @@ public class BackofficeController implements Initializable {
             pnHome.toFront();
         } else if (event.getSource() == btnGUser) {
             affform.setVisible(false);
-            affcateg.setVisible(false);
-            lbStatusMin.setText("/Home/GUsers");
+            affcateg.setVisible(true);
+            gridcateg.toFront();
+            lbStatusMin.setText("/Home/Gestion Users");
             lbStatus.setText("Users");
-            pnStatus.setBackground(new Background(new BackgroundFill(Color.rgb(63, 43, 99), CornerRadii.EMPTY, Insets.EMPTY)));
-            pnUsers.toFront();
+            pnStatus.setBackground(new Background(new BackgroundFill(Color.rgb(63, 99, 43), CornerRadii.EMPTY, Insets.EMPTY)));
+            URL root_url = null;
+            try {
+                root_url = new File("src/Gui/Utilisateur/List.fxml").toURI().toURL();
+            } catch (MalformedURLException malformedURLException) {
+                malformedURLException.printStackTrace();
+            }
+            Pane view = new FXloader().getPane(root_url);
+            affcateg.setCenter(view);
         } else if (event.getSource() == btnGProduits) {
             affform.setVisible(false);
             affcateg.setVisible(false);
@@ -184,26 +190,38 @@ public class BackofficeController implements Initializable {
             // showCommandes();
 
         } else if (event.getSource() == form) {
-            affform.setVisible(true);
+           /* affform.setVisible(true);
             affcateg.setVisible(false);
-            lbStatusMin.setText("/Home/Gestion Formation");
-            lbStatus.setText("Formation");
+            lbStatusMin.setText("/Home/Gestion Produits&Cathegorie");
+            lbStatus.setText("Produits&Cathegorie");
             pnStatus.setBackground(new Background(new BackgroundFill(Color.rgb(99, 43, 63), CornerRadii.EMPTY, Insets.EMPTY)));
             pnFormations.toFront();
             URL root_url = null;
             try {
-                root_url = new File("src/Gui/Formation/Formation.fxml").toURI().toURL();
+                root_url = new File("src/Gui/Category.fxml").toURI().toURL();
             } catch (MalformedURLException malformedURLException) {
                 malformedURLException.printStackTrace();
             }
             Pane view = new FXloader().getPane(root_url);
-            affform.setCenter(view);
+            affform.setCenter(view);*/
+            HomePage pPage = new HomePage();
+            Stage stage1 = (Stage) form.getScene().getWindow();
+            pPage.start(stage1);
         } else if (event.getSource() == btnGEvent) {
             affform.setVisible(false);
-            affcateg.setVisible(false);
-            lbStatusMin.setText("/Home/Gestion Evenements");
-            lbStatus.setText("Evenements");
-            pnStatus.setBackground(new Background(new BackgroundFill(Color.rgb(99, 63, 43), CornerRadii.EMPTY, Insets.EMPTY)));
+            affcateg.setVisible(true);
+            gridcateg.toFront();
+            lbStatusMin.setText("/Home/Gestion Comments");
+            lbStatus.setText("Comments");
+            pnStatus.setBackground(new Background(new BackgroundFill(Color.rgb(63, 99, 43), CornerRadii.EMPTY, Insets.EMPTY)));
+            URL root_url = null;
+            try {
+                root_url = new File("src/org/xemacscode/demo/cmnt.fxml").toURI().toURL();
+            } catch (MalformedURLException malformedURLException) {
+                malformedURLException.printStackTrace();
+            }
+            Pane view = new FXloader().getPane(root_url);
+            affcateg.setCenter(view);
         } else if (event.getSource() == btnGRating) {
             affform.setVisible(false);
             affcateg.setVisible(false);
@@ -214,12 +232,12 @@ public class BackofficeController implements Initializable {
             affform.setVisible(false);
             affcateg.setVisible(true);
             gridcateg.toFront();
-            lbStatusMin.setText("/Home/Gestion Category");
-            lbStatus.setText("Categories");
+            lbStatusMin.setText("/Home/Gestion Blogs");
+            lbStatus.setText("Blogs");
             pnStatus.setBackground(new Background(new BackgroundFill(Color.rgb(63, 99, 43), CornerRadii.EMPTY, Insets.EMPTY)));
             URL root_url = null;
             try {
-                root_url = new File("src/Gui/Formation/Category.fxml").toURI().toURL();
+                root_url = new File("src/org/xemacscode/demo/blog.fxml").toURI().toURL();
             } catch (MalformedURLException malformedURLException) {
                 malformedURLException.printStackTrace();
             }
@@ -396,11 +414,11 @@ public class BackofficeController implements Initializable {
             alert.getButtonTypes().setAll(okButton, cancelButton);
             alert.showAndWait().ifPresent(type -> {
                 if (type == okButton) {
-                    try {
+                    /*try {
                         new ServiceProduit().delete(prod.getId());
                     } catch (SQLException throwables) {
                         throwables.printStackTrace();
-                    }
+                    }*/
                     searchProduits();
                 }
             });

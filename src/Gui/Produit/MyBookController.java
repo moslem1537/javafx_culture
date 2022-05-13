@@ -2,7 +2,7 @@ package Gui.Produit;
 
 import Entities.Cart;
 import Entities.Product;
-import Entities.Produit;
+import Entities.produit;
 import animatefx.animation.FadeInDown;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

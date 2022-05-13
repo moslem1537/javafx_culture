@@ -1,7 +1,7 @@
 package Services;
 
 import Entities.Product;
-import Entities.Produit;
+import Entities.produit;
 import Interfaces.IServiceProduit;
 import Utils.Connexion;
 import javafx.collections.FXCollections;
@@ -26,7 +26,7 @@ public class ServiceProduit implements IServiceProduit {
     public ServiceProduit(){
         cnx = Connexion.getInstance().getConnection();
     }
-    @Override
+   /* @Override
     public void add(Produit produit) throws SQLException {
         try {
             String request
@@ -44,8 +44,8 @@ public class ServiceProduit implements IServiceProduit {
             System.out.println(err.getMessage());
         }
 
-    }
-
+    }*/
+/*
     @Override
     public boolean delete(int idProduit) throws SQLException {
         String req = "delete from products where id=?";
@@ -62,8 +62,8 @@ public class ServiceProduit implements IServiceProduit {
 
         return false;
     }
-
-    @Override
+*/
+   /* @Override
     public void update2(Produit entity, int id) {
         try {
             String request=
@@ -81,7 +81,8 @@ public class ServiceProduit implements IServiceProduit {
         }
 
 
-    }
+    }*/
+    /*
     @Override
     public void update(Produit entity, AtomicReference<Produit> prod) {
         try {
@@ -100,7 +101,7 @@ public class ServiceProduit implements IServiceProduit {
 
 
     }
-
+*/
     @Override
     public ArrayList<Product> getAll() {
         ArrayList<Product> Oblist = new ArrayList<>();

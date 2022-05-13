@@ -1,7 +1,7 @@
 package Gui.Commande;
 
 import Entities.Commande;
-import Entities.Produit;
+import Entities.produit;
 import Services.ServiceCommande;
 import Services.ServiceProduit;
 import javafx.collections.ObservableList;

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="578.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.xemacscode.demo.BlogdController">
+   <children>
+      <TableView fx:id="aaaa" layoutY="417.0" onMouseClicked="#handleMouseAction" prefHeight="161.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="aa" prefWidth="298.0" text="les commentaires" />
+            <TableColumn fx:id="colnickname" prefWidth="106.0" text="Nickname" />
+            <TableColumn fx:id="colemail" prefWidth="137.0" text="Email" />
+            <TableColumn fx:id="colid" prefWidth="58.0" text="ID" visible="false" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tfnickname" layoutX="425.0" layoutY="53.0" promptText="votre nickname" />
+      <TextField fx:id="tfemail" layoutX="426.0" layoutY="99.0" promptText="votre email" />
+      <TextField fx:id="tfcontenu" layoutX="425.0" layoutY="145.0" promptText="votre commentaire" />
+      <Button fx:id="btnajouter" layoutX="527.0" layoutY="209.0" mnemonicParsing="false" onAction="#v" text="Ajouter" />
+      <Button fx:id="btnupdate" layoutX="459.0" layoutY="210.0" mnemonicParsing="false" onAction="#u" text="Update" />
+      <Button fx:id="btndelete" layoutX="390.0" layoutY="209.0" mnemonicParsing="false" onAction="#d" text="Delete" />
+      <Label fx:id="tfid" layoutX="472.0" layoutY="30.0" prefHeight="18.0" prefWidth="32.0" visible="false" />
+      <Label layoutX="444.0" layoutY="29.0" text="ID :" visible="false" />
+      <Button fx:id="ImgBTN" layoutX="14.0" layoutY="368.0" mnemonicParsing="false" onMouseClicked="#imgaction" prefHeight="32.0" prefWidth="91.0" text="pdf" />
+      <AnchorPane fx:id="pdf" layoutX="2.0" layoutY="2.0" prefHeight="363.0" prefWidth="384.0">
+         <children>
+            <Label fx:id="tt" layoutX="50.0" layoutY="5.0" prefHeight="25.0" prefWidth="198.0" textFill="#1329a8">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imageview" fitHeight="150.0" fitWidth="375.0" layoutX="4.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" />
+            <TextArea fx:id="cnt" layoutY="192.0" prefHeight="167.0" prefWidth="384.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -8,9 +8,7 @@ package Gui.Acceuil;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import Entities.Offre_Emploi;
-import Gui.OffreEmploi.OffreCell;
-import Services.Offre_Emploi_Service;
+
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -28,8 +26,7 @@ public class FirstpageController implements Initializable {
 
     @FXML
     private BorderPane yt;
-    @FXML
-    private ListView<Offre_Emploi> jobs;
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -39,12 +36,6 @@ public class FirstpageController implements Initializable {
                 "https://www.youtube.com/watch?v=5dE8MP0fYPk"
         );
         yt.setCenter(webView);
-    }
-
-    public void showOffres() {
-        ObservableList<Offre_Emploi> offres = new Offre_Emploi_Service().getAll(1);
-        jobs.setItems(offres);
-        jobs.setCellFactory(studentListView -> new OffreCell());
     }
 
 }

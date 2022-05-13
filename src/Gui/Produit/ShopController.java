@@ -2,7 +2,7 @@ package Gui.Produit;
 
 import Entities.Cart;
 import Entities.Product;
-import Entities.Produit;
+import Entities.produit;
 import Gui.Commande.PanierController;
 import Services.ServiceProduit;
 import animatefx.animation.Bounce;

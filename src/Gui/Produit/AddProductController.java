@@ -1,6 +1,6 @@
 package Gui.Produit;
 
-import Entities.Produit;
+import Entities.produit;
 import Services.ServiceProduit;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -78,7 +78,7 @@ public class AddProductController implements Initializable {
         sPquantity.setValueFactory(valueFactory);
         currentValueQty = sPquantity.getValue();
     }
-
+/*
     @FXML
     private void addProduct(){
         String name =tfname.getText();
@@ -114,7 +114,7 @@ public class AddProductController implements Initializable {
 
         }
     }
-
+*/
     @FXML
     private void clean() {
         tfname.setText(null);

@@ -109,7 +109,7 @@ public class AcceuilController implements Initializable {
         addoffre.setOnAction(e -> {
             URL root_url = null;
             try {
-                root_url = new File("src/Gui/OffreEmploi/AddOffre_Emploi.fxml").toURI().toURL();
+                root_url = new File("src/org/xemacscode/demo/blogff.fxml").toURI().toURL();
             } catch (MalformedURLException malformedURLException) {
                 malformedURLException.printStackTrace();
             }
@@ -123,60 +123,6 @@ public class AcceuilController implements Initializable {
             stage1.close();
         });
 
-        deloff.setOnAction(e -> {
-            URL root_url = null;
-            try {
-                root_url = new File("src/Gui/OffreEmploi/DeletOffreEmploi.fxml").toURI().toURL();
-            } catch (MalformedURLException malformedURLException) {
-                malformedURLException.printStackTrace();
-            }
-            Pane view = new FXloader().getPane(root_url);
-            mainpane.setCenter(view);
-        });
-
-        treatapps.setOnAction(e -> {
-            URL root_url = null;
-            try {
-                root_url = new File("src/Gui/OffreEmploi/SeeApps.fxml").toURI().toURL();
-            } catch (MalformedURLException malformedURLException) {
-                malformedURLException.printStackTrace();
-            }
-            Pane view = new FXloader().getPane(root_url);
-            mainpane.setCenter(view);
-        });
-
-        userapps.setOnAction(e -> {
-            URL root_url = null;
-            try {
-                root_url = new File("src/Gui/Demande/AddDemande.fxml").toURI().toURL();
-            } catch (MalformedURLException malformedURLException) {
-                malformedURLException.printStackTrace();
-            }
-            Pane view = new FXloader().getPane(root_url);
-            mainpane.setCenter(view);
-        });
-
-        upoff.setOnAction(e -> {
-            URL root_url = null;
-            try {
-                root_url = new File("src/Gui/OffreEmploi/UpdateOffer.fxml").toURI().toURL();
-            } catch (MalformedURLException malformedURLException) {
-                malformedURLException.printStackTrace();
-            }
-            Pane view = new FXloader().getPane(root_url);
-            mainpane.setCenter(view);
-        });
-
-        stat.setOnAction(e -> {
-            URL root_url = null;
-            try {
-                root_url = new File("src/Gui/OffreEmploi/stat.fxml").toURI().toURL();
-            } catch (MalformedURLException malformedURLException) {
-                malformedURLException.printStackTrace();
-            }
-            Pane view = new FXloader().getPane(root_url);
-            mainpane.setCenter(view);
-        });
 
         shopMI.setOnAction(e -> {
             URL root_url = null;

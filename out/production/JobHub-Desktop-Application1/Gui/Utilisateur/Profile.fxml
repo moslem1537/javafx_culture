@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1202.0" style="-fx-background-color: eaf2ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.Utilisateur.DefaultpageController">
+   <children>
+      <Label fx:id="User" layoutX="1140.0" layoutY="14.0" text="Label" />
+      <VBox layoutX="-1.0" layoutY="-3.0" prefHeight="756.0" prefWidth="290.0" style="-fx-background-color: #1E7FCB;">
+         <children>
+            <Label prefHeight="115.0" prefWidth="331.0" text="Culture" textAlignment="JUSTIFY" textFill="#dddddd">
+               <font>
+                  <Font name="Calibri Bold" size="42.0" />
+               </font>
+            </Label>
+            <Button fx:id="b_profil" mnemonicParsing="false" onAction="#on_b_profil" prefHeight="90.0" prefWidth="331.0" style="-fx-background-color: #1E7FCB;" text="Profil" textFill="#faf7f7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_projets" mnemonicParsing="false" onAction="#on_b_projets" prefHeight="90.0" prefWidth="331.0" style="-fx-background-color: #1E7FCB;" text="Projets" textFill="#faf7f7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_evenements" mnemonicParsing="false" onAction="#on_b_evenements" prefHeight="90.0" prefWidth="331.0" style="-fx-background-color: #1E7FCB;" text="Evenements" textFill="#faf7f7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_forum" mnemonicParsing="false" onAction="#on_b_forum" prefHeight="90.0" prefWidth="331.0" style="-fx-background-color: #1E7FCB;" text="Forum" textFill="#faf7f7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_transactions" mnemonicParsing="false" onAction="#on_b_transactions" prefHeight="90.0" prefWidth="331.0" style="-fx-background-color: #1E7FCB;" text="Transactions" textFill="#faf7f7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_profil1" mnemonicParsing="false" onAction="#on_b_profil" prefHeight="90.0" prefWidth="331.0" style="-fx-background-color: #1E7FCB;" text="Articles" textFill="#faf7f7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TabPane layoutX="303.0" layoutY="55.0" prefHeight="413.0" prefWidth="892.0" style="-fx-background-color: eaf2ff;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="solde" text="Solde" />
+          <Tab fx:id="history" text="historique de transactions" />
+            <Tab fx:id="ownprojcts" style="bg: #1E7FCB;" text="mes projets">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: eaf2ff;" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

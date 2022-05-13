@@ -7,14 +7,26 @@ package Entities;
 
 /**
  *
- * @author souso
+ * @author admin
  */
-public class Category {
+public class category {
+     private int id;
+    private String nom;
+    private String descrption;
 
-    private int id;
-    private String titre, descriptionc, couleur;
+    public category(int id, String nom, String descrption) {
+        this.id = id;
+        this.nom = nom;
+        this.descrption = descrption;
+    }
 
-    public Category() {
+    public category(String nom, String descrption) {
+        this.nom = nom;
+        this.descrption = descrption;
+    }
+
+    public category() {
+        //To change body of generated methods, choose Tools | Templates.
     }
 
     public int getId() {
@@ -25,79 +37,26 @@ public class Category {
         this.id = id;
     }
 
-    public String getTitre() {
-        return titre;
+    public String getNom() {
+        return nom;
     }
 
-    public void setTitre(String titre) {
-        this.titre = titre;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public String getDescriptionc() {
-        return descriptionc;
+    public String getDescrption() {
+        return descrption;
     }
 
-    public void setDescriptionc(String descriptionc) {
-        this.descriptionc = descriptionc;
-    }
-
-    public String getCouleur() {
-        return couleur;
-    }
-
-    public void setCouleur(String couleur) {
-        this.couleur = couleur;
-    }
-
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + id;
-        result = prime * result + ((titre == null) ? 0 : titre.hashCode());
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        Category other = (Category) obj;
-        if (id != other.id) {
-            return false;
-        }
-        if (titre == null) {
-            if (other.titre != null) {
-                return false;
-            }
-        } else if (!titre.equals(other.titre)) {
-            return false;
-        }
-        return true;
+    public void setDescrption(String descrption) {
+        this.descrption = descrption;
     }
 
     @Override
     public String toString() {
-        return ("Category [couleur="
-                + couleur
-                + ", descriptionc="
-                + descriptionc
-                + ", titre="
-                + titre
-                + "]");
+        return "category{" + "id=" + id + "\n nom=" + nom + "\n descrption=" + descrption + '}';
     }
 
-    public Category( String titre, String descriptionc, String couleur) {
-        this.titre = titre;
-        this.descriptionc = descriptionc;
-        this.couleur = couleur;
-    }
-
+    
 }
